@@ -33,6 +33,5 @@ twitter:
     
 # Default page settings
 defaults:
-  -
     values:
-      sitemap:         false
+      sitemap: true
