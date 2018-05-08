@@ -11,7 +11,7 @@ github_username:  robethx
 
 # Build settings
 markdown: kramdown
-remote_theme: forty-jekyll-theme
+remote_theme: andrewbanchich/forty-jekyll-theme
 plugins:
   - jekyll-feed
 
