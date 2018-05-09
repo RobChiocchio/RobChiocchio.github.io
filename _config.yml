@@ -16,7 +16,7 @@ plugins:
   - jemoji
 
 # Homepage tiles
-tiles-source: posts
+tiles-source: projects
 tiles-count: 6
 
 # Social media
@@ -34,3 +34,9 @@ twitter:
 defaults:
     values:
       sitemap: true
+      
+collections:
+    projects:
+        output: true
+        permalink: /:name
+        
