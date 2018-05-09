@@ -16,7 +16,7 @@ plugins:
   - jemoji
 
 # Homepage tiles
-tiles-source: pages
+tiles-source: posts
 tiles-count: 6
 
 # Social media
@@ -36,8 +36,5 @@ defaults:
       sitemap: true
       nav-menu: false
       
-collections:
-    projects:
-        output: true
-        permalink: /:name
-        
+
+permalink: /:title # URL is the page title
