@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Borderlands 2 Unlimited COOP Mod"
-image: assets/images/bl2-thumb.jpg
+title: "Unlimited Players CO-OP Modification for Borderlands 2"
+image: assets/images/bl2-unlimited-players.jpg
 ---
 
 DESC
