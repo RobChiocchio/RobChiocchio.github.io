@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: post
 title: "Borderlands 2 Unlimited COOP Mod"
-categories: Projects
+image: assets/images/bl2-thumb.jpg
 ---
 
 DESC
