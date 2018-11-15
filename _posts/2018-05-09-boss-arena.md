@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Boss Arena"
+title: "C++ Game Engine"
 image: assets/images/boss-arena.jpg
 ---
 
