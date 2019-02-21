@@ -1,30 +1,21 @@
-<!-- Wrapper -->
-<div id="wrapper">
+{% if site.style == 'dark' %}
+  {% assign icon_color = "#ffffff" %}
+{% else %}
+  {% assign icon_color = "#24292e" %}
+{% endif %}
 
-<!-- Header -->
-<header id="header"{% if page.layout == "landing" %} class="alt style2"{% endif %}{% if page.layout == "home" %} class="alt"{% endif %}>
-	<a href="{{ "" | absolute_url }}/" class="logo"><strong>{{ site.title }}</strong> <span>{{ site.subtitle }}</span></a>
-	<!-- <nav> -->
-		<!-- <a href="#menu">Menu</a> -->
-	<!-- </nav> -->
-</header>
+{% assign content = page.content | strip_newlines %}
 
-<!-- Menu -->
-<!-- <nav id="menu"> -->
-	<!-- <ul class="links"> -->
-        <!-- {% for page in site.pages %} -->
-		    <!-- {% if page.layout == "home" %} -->
-		        <!-- <li><a href="{{ "" | absolute_url }}/">{{ page.title }}</a></li> -->
-	    	<!-- {% endif %} -->
-		<!-- {% endfor %} -->
-		<!-- {% for page in site.pages %} -->
-		    <!-- {% if page.layout != "home" and page.nav-menu == true %} -->
-		        <!-- <li><a href="{{ page.url | absolute_url }}">{{ page.title }}</a></li> -->
-		    <!-- {% endif %} -->
-		<!-- {% endfor %} -->
-	<!-- </ul> -->
-	<!-- <ul class="actions vertical"> -->
-		<!-- <li><a href="#" class="button special fit">Get Started</a></li> -->
-		<!-- <li><a href="#" class="button fit">Log In</a></li> -->
-	<!-- </ul> -->
-<!-- </nav> -->
+{% assign posts_total = site.posts | size %}
+
+{% assign user = site.github.owner %}
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ user.name }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="{{ "/assets/styles.css" | absolute_url }}" rel="stylesheet" type="text/css">
+  </head>
+  <body class="bg-white" {% if site.style == 'dark' %}style="background-color: #2f363d !important"{% endif %}>

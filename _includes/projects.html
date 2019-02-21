@@ -1,0 +1,12 @@
+<h2 {% if site.style == 'dark' %}class="text-white"{% endif %}>My Projects</h2>
+<p class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">My most popular GitHub repositories</p>
+<div class="d-sm-flex flex-wrap gutter-condensed mb-4">
+    {% assign repositories = site.github.public_repositories | sort: "stargazers_count" | reverse %}
+
+    {% for repository in repositories limit: 6 %}
+        {{ repository.st}}
+        <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+            {% include repo-card.html %}
+        </div>
+    {% endfor %}
+</div>

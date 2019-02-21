@@ -1,39 +1,28 @@
-title: RobCh.io
-subtitle: cchio
-email: email
+layout: sidebar
+style: light
+
 description: >- # this means to ignore newlines until "baseurl:"
 #  My projects
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://robch.io" # the base hostname & protocol for your site, e.g. http://example.com
 
-# Build settings
-markdown: kramdown
-remote_theme: andrewbanchich/forty-jekyll-theme
 plugins:
   - jekyll-seo-tag
-  - jekyll-sitemap
-  - jemoji
+  - jekyll-octicons
+  - jekyll-github-metadata
 
-# Homepage tiles
-tiles-source: posts
-tiles-count: 6
+permalink: /:title # URL is the page title
 
-# Social media
-twitter_username: robethx
-github_username: robethx
-github_url: https://github.com/RobethX
-gitlab_url: https://gitlab.com/u/robethx
-linkedin_url: 
-twitter_url: https://twitter.com/robethx
+topics:
+  - name: CSS
+    web_url: https://github.com/topics/css
+    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/css/css.png
+
+  - name: Web design
+
+  - name: Sass
+    web_url: https://github.com/topics/sass
+    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/sass/sass.png
 
 twitter:
     username: robethx
-    
-# Default page settings
-defaults:
-    values:
-      sitemap: true
-      nav-menu: false
-      
-
-permalink: /:title # URL is the page title
