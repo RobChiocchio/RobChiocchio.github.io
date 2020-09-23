@@ -4,10 +4,10 @@ import NavbarLinks from '../NavbarLinks';
 import { Wrapper } from './styles';
 
 const Sidebar = ({ sidebar, toggle }) => {
-  const { theme } = useContext(ThemeContext);
+  const { themeName } = useContext(ThemeContext);
   
   return (
-  <Wrapper active={sidebar} onClick={toggle} theme={theme}>
+  <Wrapper active={sidebar} onClick={toggle} theme={themeName}>
     <NavbarLinks />
   </Wrapper>
   )

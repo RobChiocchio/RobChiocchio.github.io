@@ -5,10 +5,10 @@ import ToggleTheme from 'components/theme/Header/ToggleTheme';
 import { Wrapper } from './styles';
 
 const NavbarLinks = ({ desktop }) => {
-  const { theme } = useContext(ThemeContext);
+  const { themeName } = useContext(ThemeContext);
 
   return (
-    <Wrapper desktop={desktop} theme={theme}>
+    <Wrapper desktop={desktop} theme={themeName}>
       <AnchorLink href="#about">About</AnchorLink>
       <AnchorLink href="#projects">Projects</AnchorLink>
       {/* <AnchorLink href="#contact">Contact</AnchorLink> */}

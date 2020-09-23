@@ -4,13 +4,13 @@ import { Wrapper, Bar } from './styles';
 
 const Hamburger = ({ sidebar, toggle }) => {
 
-  const { theme } = useContext(ThemeContext);
+  const { themeName } = useContext(ThemeContext);
   
   return (
     <Wrapper sidebar={sidebar} onClick={() => toggle(!sidebar)}>
-      <Bar top sidebar={sidebar} theme={theme}/>
-      <Bar mid sidebar={sidebar} theme={theme} />
-      <Bar bottom sidebar={sidebar} theme={theme} />
+      <Bar top sidebar={sidebar} theme={themeName}/>
+      <Bar mid sidebar={sidebar} theme={themeName} />
+      <Bar bottom sidebar={sidebar} theme={themeName} />
     </Wrapper>
   )
 };

@@ -6,6 +6,7 @@
   "author": "Rob Chiocchio",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "@testing-library/react": "^11.0.4",
     "axios": "^0.19.2",
     "babel-jest": "^26.3.0",

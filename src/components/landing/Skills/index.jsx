@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { ThemeContext } from 'providers/ThemeProvider';
-import { Container, Button } from 'components/common';
+import { Container, Button, Typography } from "@material-ui/core";
 import dev from 'assets/illustrations/skills.svg';
 import { Wrapper, SkillsWrapper, Details, Thumbnail } from './styles';
 
 export const Skills = () => {
-  const { theme } = useContext(ThemeContext);
+  const { themeName } = useContext(ThemeContext);
 
   return (
     <Wrapper id="about">
@@ -14,13 +14,13 @@ export const Skills = () => {
         <Thumbnail>
           <img src={dev} alt="I’m John and I’m a Backend & Devops engineer!" />
         </Thumbnail>
-        <Details theme={theme}>
+        <Details theme={themeName}>
           <h1>More about me</h1>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
             industry’s standard dummy.
           </p>
-          <Button as={AnchorLink} href="#projects">
+          <Button variant="contained" color="primary" as={AnchorLink} href="#projects">
             Hire me
           </Button>
         </Details>

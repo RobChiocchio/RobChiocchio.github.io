@@ -6,11 +6,11 @@ import NavbarLinks from '../NavbarLinks';
 import { Wrapper, Brand } from './styles';
 
 const Navbar = () => {
-  const { theme } = useContext(ThemeContext);
+  const { themeName } = useContext(ThemeContext);
 
   return (
     <Wrapper as={Container}>
-      <Brand as={Link} to="/" theme={theme}>
+      <Brand as={Link} to="/" theme={themeName}>
         Rob Chiocchio
       </Brand>
       <NavbarLinks desktop />

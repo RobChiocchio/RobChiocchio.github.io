@@ -25,13 +25,16 @@ export const Item = styled.div`
     height: 100%;
     overflow: hidden;
     box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.11);
+    text-decoration: none;
 
     h4 {
         color: ${({ theme }) => (theme === "light" ? "#212121" : "#fff")};
     }
 
     p {
+        --max-lines: 3;
         color: ${({ theme }) => (theme === "light" ? "#707070" : "#c7c7c7")};
+        text-overflow: ellipsis;
     }
 `;
 

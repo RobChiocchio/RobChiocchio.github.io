@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { ThemeContext } from 'providers/ThemeProvider';
-import { Container, Card } from 'components/common';
+import { Container, Box, Card, CardContent, CardHeader, Typography } from "@material-ui/core";
 import Star from 'components/common/Icons/Star';
 import Fork from 'components/common/Icons/Fork';
 import { Wrapper, Grid, Item, Content, Stats } from './styles';
 
 export const Projects = () => {
-  const { theme } = useContext(ThemeContext);
+  const { themeName } = useContext(ThemeContext);
   const {
     github: {
       viewer: {
@@ -43,23 +43,24 @@ export const Projects = () => {
       <h2>Projects</h2>
       <Grid>
         {edges.map(({ node }) => (
-          <Item key={node.id} as="a" href={node.url} target="_blank" rel="noopener noreferrer" theme={theme}>
-            <Card theme={theme}>
+          <Item key={node.id} as="a" href={node.url} target="_blank" rel="noopener noreferrer" theme={themeName}>
+            <Box bgcolor="background.paper" p={"1rem"} height="100%" maxHeight="15rem">
               <Content>
+                {/* <Typography variant="h4">{node.name}</Typography> */}
                 <h4>{node.name}</h4>
                 <p>{node.description}</p>
               </Content>
-              <Stats theme={theme}>
+              <Stats theme={themeName}>
                 <div>
-                  <Star color={theme === 'light' ? '#000' : '#fff'} />
+                  <Star color={themeName === 'light' ? '#000' : '#fff'} />
                   <span>{node.stargazers.totalCount}</span>
                 </div>
                 <div>
-                  <Fork color={theme === 'light' ? '#000' : '#fff'} />
+                  <Fork color={themeName === 'light' ? '#000' : '#fff'} />
                   <span>{node.forkCount}</span>
                 </div>
               </Stats>
-            </Card>
+            </Box>
           </Item>
         ))}
       </Grid>

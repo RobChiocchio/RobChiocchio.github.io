@@ -1,17 +1,39 @@
 import React, { useContext } from 'react';
-import { ThemeContext } from 'providers/ThemeProvider';
+import { createMuiTheme } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import ThemeProvider, { ThemeContext } from 'providers/ThemeProvider';
 import { Footer } from 'components/theme';
-import { Global } from './styles';
+import { Global } from './styles.js';
 import './fonts.css';
 
 export const Layout = ({ children }) => {
-  const { theme } = useContext(ThemeContext);
+  const prefersDarkMode = useContext(ThemeContext);
+
+  //const { themeName } = useContext(ThemeContext);
+  // const theme = React.useMemo(
+  //   () =>
+  //     createMuiTheme({
+  //       palette: {
+  //         type: prefersDarkMode ? "dark" : "light",
+  //         background: {
+  //           paper: prefersDarkMode ? "#424242" : "#ffffff",
+  //           default: prefersDarkMode ? "#303030" : "#fafafa",
+  //         },
+  //       },
+  //     }),
+  //     [prefersDarkMode],
+  // );
 
   return (
     <>
-      <Global theme={theme} />
-      {children}
-      <Footer />
+      {/* <Global theme={prefersDarkMode} /> */}
+      {/* <ThemeProvider theme={theme}> */}
+      {/* <ThemeProvider> */}
+        <CssBaseline />
+        {children}
+        <Footer />
+      {/* </ThemeProvider> */}
+      {/* </ThemeProvider> */}
     </>
   );
 };
