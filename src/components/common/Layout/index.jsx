@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { createMuiTheme } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import ThemeProvider, { ThemeContext } from 'providers/ThemeProvider';
-import { Footer } from 'components/theme';
 import { Global } from './styles.js';
 import './fonts.css';
 
@@ -30,8 +29,8 @@ export const Layout = ({ children }) => {
       {/* <ThemeProvider theme={theme}> */}
       {/* <ThemeProvider> */}
         <CssBaseline />
+        <Global />
         {children}
-        <Footer />
       {/* </ThemeProvider> */}
       {/* </ThemeProvider> */}
     </>

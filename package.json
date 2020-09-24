@@ -7,7 +7,10 @@
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
     "@testing-library/react": "^11.0.4",
+    "@visx/pattern": "^1.0.0",
+    "@visx/react-spring": "^1.0.0",
     "axios": "^0.19.2",
     "babel-jest": "^26.3.0",
     "core-js": "3",
@@ -35,6 +38,7 @@
     "react-dom": "^16.11.0",
     "react-google-recaptcha": "^1.0.5",
     "react-helmet": "^5.2.0",
+    "react-spring": "^8.0.27",
     "react-test-renderer": "^16.13.1",
     "simple-icons": "^3.7.0",
     "styled-components": "^5.2.0",

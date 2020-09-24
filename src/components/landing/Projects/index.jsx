@@ -5,6 +5,7 @@ import { Container, Box, Card, CardContent, CardHeader, Typography } from "@mate
 import Star from 'components/common/Icons/Star';
 import Fork from 'components/common/Icons/Fork';
 import { Wrapper, Grid, Item, Content, Stats } from './styles';
+//import { Star } from '@material-ui/icons';
 
 export const Projects = () => {
   const { themeName } = useContext(ThemeContext);
@@ -38,6 +39,7 @@ export const Projects = () => {
       }
     `
   );
+
   return (
     <Wrapper as={Container} id="projects">
       <h2>Projects</h2>
